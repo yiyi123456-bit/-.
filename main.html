@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: yellow;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 10px;
+            width: 80vw;
+            height: 80vh;
+        }
+
+        .grid-item {
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+
+        .fight-button {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- 创建5x5的网格 -->
+        <div class="grid-item" data-index="1"></div>
+        <div class="grid-item" data-index="2"></div>
+        <div class="grid-item" data-index="3"></div>
+        <div class="grid-item" data-index="4"></div>
+        <div class="grid-item" data-index="5"></div>
+        <div class="grid-item" data-index="6"></div>
+        <div class="grid-item" data-index="7"></div>
+        <div class="grid-item" data-index="8"></div>
+        <div class="grid-item" data-index="9"></div>
+        <div class="grid-item" data-index="10"></div>
+        <div class="grid-item" data-index="11"></div>
+        <div class="grid-item" data-index="12"></div>
+        <div class="grid-item" data-index="13"></div>
+        <div class="grid-item" data-index="14"></div>
+        <div class="grid-item" data-index="15"></div>
+        <div class="grid-item" data-index="16"></div>
+        <div class="grid-item" data-index="17"></div>
+        <div class="grid-item" data-index="18"></div>
+        <div class="grid-item" data-index="19"></div>
+        <div class="grid-item" data-index="20"></div>
+        <div class="grid-item" data-index="21"></div>
+        <div class="grid-item" data-index="22"></div>
+        <div class="grid-item" data-index="23"></div>
+        <div class="grid-item" data-index="24"></div>
+        <div class="grid-item" data-index="25"></div>
+    </div>
+
+    <button id="fight-button" class="fight-button">Fight</button>
+
+    <script>
+        // 监听每个格子的点击事件
+        document.querySelectorAll('.grid-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // 显示Fight按钮
+                const fightButton = document.getElementById('fight-button');
+                fightButton.style.display = 'block';
+            });
+        });
+
+        // 监听Fight按钮的点击事件，跳转到战斗界面
+        document.getElementById('fight-button').addEventListener('click', function() {
+            window.location.href = 'index.html'; // 跳转到战斗界面
+        });
+    </script>
+</body>
+</html>

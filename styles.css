@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+.battle-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+    background-image: url('background.png');
+    background-size: cover;
+}
+
+.player-pokemon, .opponent-pokemon {
+    display: flex;
+    align-items: center;
+}
+
+.pokemon-sprite {
+    width: 150px;
+    height: auto;
+}
+
+.pokemon-info {
+    margin-left: 20px;
+}
+
+.health-bar {
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+    border: 2px solid #000;
+    margin-bottom: 5px;
+}
+
+.health {
+    height: 100%;
+    background-color: green;
+}
+
+.battle-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffcc00;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.skills {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.skill-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00ff00;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.pokemon-selection {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.pokemon-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff99cc;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.action-message {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border: 2px solid #000;
+    font-size: 18px;
+    text-align: center;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+/* 针对较小屏幕的样式，例如安卓设备 */
+@media (max-width: 768px) {
+    .battle-options {
+        flex-direction: column; /* 选项按钮可以垂直排列在小屏幕上 */
+    }
+
+    .skills {
+        flex-direction: column; /* 技能按钮可以垂直排列 */
+    }
+
+    .pokemon-selection {
+        flex-direction: column; /* 宝可梦选择垂直排列 */
+    }
+
+    .action-message {
+        font-size: 14px; /* 调整字体大小以适应小屏幕 */
+    }
+}
+ body {
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .battle-container {
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            position: relative;
+        }
+
+        .exit-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
